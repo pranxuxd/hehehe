@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 345 83% 81%;
+  --primary-foreground: 355 64% 28%;
+  --secondary: 240 73% 97%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 345 83% 81%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+
+  /* Custom colors */
+  --soft-pink: 335 80% 90%;
+  --lavender: 240 67% 94%;
+  --rose-gold: 353 29% 45%;
+  --off-white: 0 0% 97%;
+  --muted-gray: 0 0% 35%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 345 83% 81%;
+  --primary-foreground: 355 64% 28%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 345 83% 81%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-off-white text-muted-gray font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cormorant;
+  }
+}
+
+@layer utilities {
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .font-lato {
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .bg-soft-pink {
+    background-color: hsl(var(--soft-pink));
+  }
+  
+  .bg-lavender {
+    background-color: hsl(var(--lavender));
+  }
+  
+  .text-rose-gold {
+    color: hsl(var(--rose-gold));
+  }
+  
+  .bg-rose-gold {
+    background-color: hsl(var(--rose-gold));
+  }
+  
+  .bg-off-white {
+    background-color: hsl(var(--off-white));
+  }
+  
+  .text-muted-gray {
+    color: hsl(var(--muted-gray));
+  }
+
+  /* Custom animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.8s ease-in-out;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
