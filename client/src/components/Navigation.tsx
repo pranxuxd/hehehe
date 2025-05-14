@@ -20,11 +20,9 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { id: 'countdown', label: 'Countdown' },
-    { id: 'gallery', label: 'Memories' },
+    { id: 'gallery', label: 'Her' },
     { id: 'messages', label: 'Love Notes' },
-    { id: 'music', label: 'Music' },
-    { id: 'wishes', label: 'Wishes' }
+    { id: 'music', label: 'Music' }
   ];
 
   const handleNavClick = (id: string) => {
