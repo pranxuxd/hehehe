@@ -67,23 +67,33 @@ export default function LoveNotes() {
   const defaultNotes = [
     {
       id: 1,
-      message: 'You bring a light to my life that I never knew existed. Your smile can brighten even my darkest days. Thank you for being you - the most incredible person I\'ve ever known.',
+      message: 'Your beautiful eyes captivate me every time I look at you. They hold a universe of emotions that speak to my soul in ways words never could. Your smile can brighten even my darkest days.',
       greeting: 'To my dearest Avani,'
     },
     {
       id: 2,
-      message: 'Every moment with you feels like a precious gift. Your laughter is my favorite melody and your heart is my favorite place to call home. I cherish each day we spend together.',
+      message: 'I love how you get excited about Hello Kitty and all the little things that bring you joy. Your childlike wonder and enthusiasm for life is one of the many reasons I fell in love with you.',
       greeting: 'My beautiful Avani,'
     },
     {
       id: 3,
-      message: 'On your special day, I want you to know how much joy you bring to everyone around you. Your kindness, intelligence, and beauty inspire me every single day. You are my everything.',
+      message: 'On your special day, I want you to know that you deserve all the happiness in the world. Your kindness, intelligence, and beauty inspire me every single day. You are my everything.',
       greeting: 'Happy Birthday Love,'
     },
     {
       id: 4,
-      message: 'I fall in love with you a little more every day. Your passion, your dreams, your gentle soul - everything about you makes my world brighter. Thank you for sharing your life with me.',
+      message: 'The way you look in traditional clothes takes my breath away. Your grace and elegance are matched only by your kind heart and loving nature. I am so lucky to have you in my life.',
       greeting: 'My Sunshine,'
+    },
+    {
+      id: 5,
+      message: 'From your childhood photos to now, your smile has always been radiant. Watching you grow into the amazing woman you are today has been the greatest privilege of my life.',
+      greeting: 'My Precious,'
+    },
+    {
+      id: 6,
+      message: 'Even on your sleepy days when you\'re tired, you\'re still the most beautiful person in the world to me. Your authenticity and realness make me fall more in love with you each day.',
+      greeting: 'To My Heart,'
     }
   ];
 

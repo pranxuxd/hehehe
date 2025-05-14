@@ -1,5 +1,19 @@
 import { useState } from 'react';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
+
+// Import all of Avani's photos
+import avani1 from '@/assets/images/avani1.png';
+import avani2 from '@/assets/images/avani2.png';
+import avani3 from '@/assets/images/avani3.png';
+import avani4 from '@/assets/images/avani4.png';
+import avani5 from '@/assets/images/avani5.png';
+import avani6 from '@/assets/images/avani6.png';
+import avani7 from '@/assets/images/avani7.png';
+import avani8 from '@/assets/images/avani8.png';
+import avani9 from '@/assets/images/avani9.png';
+import avani10 from '@/assets/images/avani10.png';
+import avani11 from '@/assets/images/avani11.png';
+import avani12 from '@/assets/images/avani12.png';
 
 interface MemoryPhoto {
   id: number;
@@ -14,39 +28,75 @@ export default function PhotoGallery() {
   const memories: MemoryPhoto[] = [
     {
       id: 1,
-      title: 'Our First Date',
-      description: 'That magical day we\'ll never forget',
-      imageSrc: 'https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      title: "Beautiful in Blue",
+      description: "Your elegant style and grace captivate me every time",
+      imageSrc: avani1
     },
     {
       id: 2,
-      title: 'Sunday Picnics',
-      description: 'Our favorite weekend tradition',
-      imageSrc: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      title: "Sweet Glance",
+      description: "The way you look at me melts my heart",
+      imageSrc: avani2
     },
     {
       id: 3,
-      title: 'Beach Sunsets',
-      description: 'When time stood still for us',
-      imageSrc: 'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      title: "Thoughtful Moment",
+      description: "I love watching you lost in your thoughts",
+      imageSrc: avani3
     },
     {
       id: 4,
-      title: 'Dancing in the Rain',
-      description: 'Spontaneous joy with you',
-      imageSrc: 'https://images.unsplash.com/photo-1511715282680-fbf93a50e721?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      title: "Dreamy Eyes",
+      description: "Your eyes hold a universe of dreams",
+      imageSrc: avani4
     },
     {
       id: 5,
-      title: 'Mountain Adventures',
-      description: 'Reaching new heights together',
-      imageSrc: 'https://images.unsplash.com/photo-1533692328991-08159ff19fca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      title: "Playful Smile",
+      description: "Your smile brightens even the darkest days",
+      imageSrc: avani5
     },
     {
       id: 6,
-      title: 'Endless Laughter',
-      description: 'Your smile brightens my world',
-      imageSrc: 'https://images.unsplash.com/photo-1523286877159-d9636545890c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
+      title: "Outdoor Adventures",
+      description: "Every moment spent with you is a treasure",
+      imageSrc: avani6
+    },
+    {
+      id: 7,
+      title: "Traditional Beauty",
+      description: "You look stunning in traditional attire",
+      imageSrc: avani7
+    },
+    {
+      id: 8,
+      title: "Childhood Memories",
+      description: "Cherishing the innocence of your early years",
+      imageSrc: avani8
+    },
+    {
+      id: 9,
+      title: "Cozy Moments",
+      description: "The quiet times together are the most precious",
+      imageSrc: avani9
+    },
+    {
+      id: 10,
+      title: "Adorable Hearts",
+      description: "Your playful side makes me fall in love every day",
+      imageSrc: avani10
+    },
+    {
+      id: 11,
+      title: "Sleepy Cuddles",
+      description: "Even when you're tired, you're perfect",
+      imageSrc: avani11
+    },
+    {
+      id: 12,
+      title: "Hello Kitty Fan",
+      description: "Your cute side shows in everything you love",
+      imageSrc: avani12
     }
   ];
 
@@ -81,6 +131,7 @@ export default function PhotoGallery() {
 
       <Dialog open={!!selectedPhoto} onOpenChange={() => setSelectedPhoto(null)}>
         <DialogContent className="max-w-3xl bg-white p-0 overflow-hidden">
+          <DialogTitle className="sr-only">Photo Details</DialogTitle>
           {selectedPhoto && (
             <div className="flex flex-col md:flex-row">
               <div className="md:w-2/3">

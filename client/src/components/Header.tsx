@@ -1,5 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import { scrollToElement } from '@/lib/utils';
+import avani3 from '@/assets/images/avani3.png';
 
 export default function Header() {
   const handleExploreClick = () => {
@@ -10,12 +11,12 @@ export default function Header() {
     <header className="relative h-screen flex items-center justify-center overflow-hidden animate-fade-in">
       <div className="absolute inset-0 bg-cover bg-center z-0" 
            style={{ 
-             backgroundImage: "url('https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')", 
-             backgroundColor: "rgba(249, 213, 229, 0.3)", 
+             backgroundImage: `url(${avani3})`, 
+             backgroundColor: "rgba(249, 213, 229, 0.5)", 
              backgroundBlendMode: "overlay" 
            }}></div>
       
-      <div className="relative z-10 text-center px-6 py-10 bg-white bg-opacity-80 rounded-lg shadow-md max-w-lg mx-auto animate-scale-in">
+      <div className="relative z-10 text-center px-6 py-10 bg-white bg-opacity-85 rounded-lg shadow-md max-w-lg mx-auto animate-scale-in">
         <h1 className="font-dancing text-5xl md:text-6xl mb-4 text-rose-gold">Happy Birthday</h1>
         <h2 className="font-cormorant text-4xl font-light tracking-wide text-muted-gray mb-6">Avani</h2>
         <p className="font-lato text-lg mb-8">On this special day, I want to celebrate you and all the love we share.</p>
