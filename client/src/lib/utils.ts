@@ -24,8 +24,8 @@ export async function submitWish(data: {
   return apiRequest("POST", "/api/wishes", data);
 }
 
-export async function submitLoveNote(message: string) {
-  return apiRequest("POST", "/api/love-notes", { message });
+export async function submitLoveNote(message: string, greeting: string = '') {
+  return apiRequest("POST", "/api/love-notes", { message, greeting });
 }
 
 // Format time in MM:SS format

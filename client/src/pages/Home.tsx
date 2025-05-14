@@ -10,8 +10,8 @@ import WishesForm from '@/components/WishesForm';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-  // Set Avani's birthday date - adjust as needed
-  const birthdayDate = new Date('2023-12-31T00:00:00');
+  // Set Avani's birthday date
+  const birthdayDate = new Date('2025-05-25T00:00:00');
   
   return (
     <Fragment>

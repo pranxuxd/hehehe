@@ -35,11 +35,13 @@ export const insertBirthdayWishSchema = createInsertSchema(birthdayWishes).pick(
 export const loveNotes = pgTable("love_notes", {
   id: serial("id").primaryKey(),
   message: text("message").notNull(),
+  greeting: text("greeting").notNull().default(''),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
 export const insertLoveNoteSchema = createInsertSchema(loveNotes).pick({
   message: true,
+  greeting: true,
 });
 
 // Type definitions

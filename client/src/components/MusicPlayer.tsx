@@ -17,28 +17,42 @@ export default function MusicPlayer() {
   const [isFavorite, setIsFavorite] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   
-  // Sample playlist
+  // Playlist of romantic songs
   const playlist: Song[] = [
     {
       id: 1,
-      title: "Perfect",
-      artist: "Ed Sheeran",
-      duration: 263,
-      src: "https://cdn.pixabay.com/download/audio/2022/11/22/audio_febc508520.mp3?filename=lofi-study-112191.mp3"
+      title: "Forever Love",
+      artist: "Romantic Melodies",
+      duration: 158,
+      src: "https://cdn.pixabay.com/download/audio/2022/03/15/audio_c9d4818250.mp3?filename=sweet-love-113409.mp3"
     },
     {
       id: 2,
-      title: "All of Me",
-      artist: "John Legend",
-      duration: 270,
-      src: "https://cdn.pixabay.com/download/audio/2022/05/16/audio_1b8adc1d6d.mp3?filename=relaxed-vlog-131746.mp3"
+      title: "Love Ballad",
+      artist: "Acoustic Dreams",
+      duration: 153,
+      src: "https://cdn.pixabay.com/download/audio/2023/06/21/audio_9e6c5f470c.mp3?filename=in-love-185587.mp3"
     },
     {
       id: 3,
-      title: "A Thousand Years",
-      artist: "Christina Perri",
-      duration: 285,
-      src: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_380f2fb30a.mp3?filename=lofi-chill-medium-version-159456.mp3"
+      title: "Heart Symphony",
+      artist: "Piano Emotions",
+      duration: 180,
+      src: "https://cdn.pixabay.com/download/audio/2022/04/27/audio_99cc771722.mp3?filename=inspiring-cinematic-ambient-116199.mp3"
+    },
+    {
+      id: 4,
+      title: "Together Forever",
+      artist: "Soulful Harmony",
+      duration: 140,
+      src: "https://cdn.pixabay.com/download/audio/2022/04/20/audio_9a1fe17f6c.mp3?filename=lofi-chill-14492.mp3"
+    },
+    {
+      id: 5,
+      title: "My Avani",
+      artist: "Special Dedication",
+      duration: 134,
+      src: "https://cdn.pixabay.com/download/audio/2022/10/31/audio_9a68a1fde3.mp3?filename=emotional-piano-soundtrack-138306.mp3"
     }
   ];
 

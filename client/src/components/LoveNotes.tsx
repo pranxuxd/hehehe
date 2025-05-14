@@ -9,6 +9,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 interface LoveNote {
   id: number;
   message: string;
+  greeting?: string;
   createdAt: string;
 }
 
@@ -23,7 +24,8 @@ export default function LoveNotes() {
   });
 
   const createNoteMutation = useMutation({
-    mutationFn: submitLoveNote,
+    mutationFn: ({ message, greeting }: { message: string; greeting?: string }) => 
+      submitLoveNote(message, greeting),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['/api/love-notes'] });
       setNoteText('');
@@ -52,7 +54,7 @@ export default function LoveNotes() {
       return;
     }
     
-    createNoteMutation.mutate(noteText);
+    createNoteMutation.mutate({ message: noteText });
   };
   
   // Hearts and icons for love notes
@@ -113,7 +115,9 @@ export default function LoveNotes() {
                 className="bg-white p-6 rounded-lg shadow-md transform hover:-translate-y-1 transition-transform duration-300"
               >
                 <p className="font-dancing text-rose-gold text-2xl mb-4">
-                  {loveNotes.length > 0 ? `"${note.message.substring(0, 15)}..."` : `"${note.greeting}"`}
+                  {loveNotes.length > 0 
+                    ? `"${note.message.substring(0, 15)}..."` 
+                    : `"${(note as any).greeting || 'Dear Avani'}"`}
                 </p>
                 <p className="font-lato text-muted-gray mb-6">
                   {note.message}
