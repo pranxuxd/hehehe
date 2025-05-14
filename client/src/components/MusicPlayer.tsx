@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Play, Pause, SkipBack, SkipForward, Heart } from 'lucide-react';
 import { formatTime } from '@/lib/utils';
+import saiyyanSong from '@/assets/music/saiyyan.mp3';
 
 interface Song {
   id: number;
@@ -53,6 +54,13 @@ export default function MusicPlayer() {
       artist: "Special Dedication",
       duration: 134,
       src: "https://cdn.pixabay.com/download/audio/2022/10/31/audio_9a68a1fde3.mp3?filename=emotional-piano-soundtrack-138306.mp3"
+    },
+    {
+      id: 6,
+      title: "Saiyyan - Tujhe Jeet Jeet Haru",
+      artist: "Special For You",
+      duration: 210,
+      src: saiyyanSong
     }
   ];
 

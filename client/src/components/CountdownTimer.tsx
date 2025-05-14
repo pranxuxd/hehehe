@@ -6,71 +6,46 @@ interface CountdownTimerProps {
 }
 
 export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
-  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining(targetDate));
+  const [timeRemaining, setTimeRemaining] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       setTimeRemaining(calculateTimeRemaining(targetDate));
     }, 1000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, [targetDate]);
 
+  const formatNumber = (num: number): string => {
+    return num < 10 ? `0${num}` : `${num}`;
+  };
+
   return (
-    <section id="countdown" className="py-20 bg-lavender bg-opacity-30">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="font-cormorant text-3xl md:text-4xl mb-12 text-muted-gray">Celebrating Your Special Day</h2>
-        
-        <div className="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
-          <h3 className="font-dancing text-2xl mb-6 text-rose-gold">The Big Day Countdown</h3>
-          
-          {timeRemaining.isPast ? (
-            <div className="w-full p-2">
-              <div className="bg-soft-pink bg-opacity-30 rounded-lg p-4">
-                <span className="block text-2xl font-dancing text-rose-gold">Happy Birthday!</span>
-                <span className="text-sm">Today is your special day!</span>
-              </div>
-            </div>
-          ) : (
-            <div className="flex justify-center flex-wrap" id="countdown-container">
-              <div className="w-1/2 md:w-1/4 p-2">
-                <div className="bg-soft-pink bg-opacity-30 rounded-lg p-4">
-                  <span id="days" className="block text-4xl font-cormorant font-light text-rose-gold">
-                    {timeRemaining.days.toString().padStart(2, '0')}
-                  </span>
-                  <span className="text-sm uppercase tracking-wide">Days</span>
-                </div>
-              </div>
-              <div className="w-1/2 md:w-1/4 p-2">
-                <div className="bg-soft-pink bg-opacity-30 rounded-lg p-4">
-                  <span id="hours" className="block text-4xl font-cormorant font-light text-rose-gold">
-                    {timeRemaining.hours.toString().padStart(2, '0')}
-                  </span>
-                  <span className="text-sm uppercase tracking-wide">Hours</span>
-                </div>
-              </div>
-              <div className="w-1/2 md:w-1/4 p-2">
-                <div className="bg-soft-pink bg-opacity-30 rounded-lg p-4">
-                  <span id="minutes" className="block text-4xl font-cormorant font-light text-rose-gold">
-                    {timeRemaining.minutes.toString().padStart(2, '0')}
-                  </span>
-                  <span className="text-sm uppercase tracking-wide">Minutes</span>
-                </div>
-              </div>
-              <div className="w-1/2 md:w-1/4 p-2">
-                <div className="bg-soft-pink bg-opacity-30 rounded-lg p-4">
-                  <span id="seconds" className="block text-4xl font-cormorant font-light text-rose-gold">
-                    {timeRemaining.seconds.toString().padStart(2, '0')}
-                  </span>
-                  <span className="text-sm uppercase tracking-wide">Seconds</span>
-                </div>
-              </div>
-            </div>
-          )}
-          
-          <p className="mt-8 text-muted-gray">Every second brings us closer to celebrating you!</p>
-        </div>
+    <div className="flex justify-center flex-wrap gap-4 my-8">
+      <div className="bg-white p-5 rounded-lg shadow-md w-24 h-24 flex flex-col items-center justify-center">
+        <span className="font-cormorant text-3xl text-rose-gold">{formatNumber(timeRemaining.days)}</span>
+        <span className="font-lato text-xs text-muted-gray uppercase tracking-wider">Days</span>
       </div>
-    </section>
+      
+      <div className="bg-white p-5 rounded-lg shadow-md w-24 h-24 flex flex-col items-center justify-center">
+        <span className="font-cormorant text-3xl text-rose-gold">{formatNumber(timeRemaining.hours)}</span>
+        <span className="font-lato text-xs text-muted-gray uppercase tracking-wider">Hours</span>
+      </div>
+      
+      <div className="bg-white p-5 rounded-lg shadow-md w-24 h-24 flex flex-col items-center justify-center">
+        <span className="font-cormorant text-3xl text-rose-gold">{formatNumber(timeRemaining.minutes)}</span>
+        <span className="font-lato text-xs text-muted-gray uppercase tracking-wider">Minutes</span>
+      </div>
+      
+      <div className="bg-white p-5 rounded-lg shadow-md w-24 h-24 flex flex-col items-center justify-center">
+        <span className="font-cormorant text-3xl text-rose-gold">{formatNumber(timeRemaining.seconds)}</span>
+        <span className="font-lato text-xs text-muted-gray uppercase tracking-wider">Seconds</span>
+      </div>
+    </div>
   );
 }
