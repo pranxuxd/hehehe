@@ -2,17 +2,12 @@ import { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
-import CountdownTimer from '@/components/CountdownTimer';
 import PhotoGallery from '@/components/PhotoGallery';
 import LoveNotes from '@/components/LoveNotes';
 import MusicPlayer from '@/components/MusicPlayer';
-import WishesForm from '@/components/WishesForm';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-  // Set Avani's birthday date
-  const birthdayDate = new Date('2025-05-25T00:00:00');
-  
   return (
     <Fragment>
       <Helmet>
@@ -25,11 +20,9 @@ export default function Home() {
       
       <Header />
       <Navigation />
-      <CountdownTimer targetDate={birthdayDate} />
       <PhotoGallery />
       <LoveNotes />
       <MusicPlayer />
-      <WishesForm />
       <Footer />
     </Fragment>
   );

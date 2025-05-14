@@ -103,9 +103,9 @@ export default function PhotoGallery() {
   return (
     <section id="gallery" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="font-cormorant text-3xl md:text-4xl mb-2 text-muted-gray text-center">Our Precious Memories</h2>
+        <h2 className="font-cormorant text-3xl md:text-4xl mb-2 text-muted-gray text-center">Look How Beautiful My Wife Is</h2>
         <p className="font-dancing text-xl text-rose-gold mb-12 text-center">Moments that tell our story</p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {memories.map(memory => (
             <div 
