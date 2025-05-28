@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-import FirstMeet from '@/components/FirstMeet';
+import chatScreenshot from '@/assets/images/chat_screenshot.png';
 
 export default function ProposalSection() {
   const [isProposalOpen, setIsProposalOpen] = useState(false);
@@ -56,12 +56,35 @@ export default function ProposalSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Use the FirstMeet component instead of the chat memories section */}
-        <FirstMeet />
+        <div className="text-center mb-16">
+          <h2 className="font-cormorant text-4xl md:text-6xl mb-6 text-deep-lavender">
+            Our Sweet Chat Memories 💕
+          </h2>
+          <p className="font-dancing text-2xl text-hello-kitty-pink mb-8">
+            Look how cute we are together! 😸
+          </p>
+        </div>
+        
+        {/* Chat Screenshot */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <div className="bg-white p-6 rounded-3xl shadow-2xl border-4 border-baby-pink relative">
+            <div className="absolute top-3 left-3 text-2xl">💬</div>
+            <div className="absolute top-3 right-3 text-2xl">😂</div>
+            <img 
+              src={chatScreenshot}
+              alt="Our cute chat conversation"
+              className="w-full rounded-2xl shadow-lg"
+            />
+            <div className="mt-4 text-center">
+              <p className="font-dancing text-xl text-deep-lavender">
+                "I CAN'T. I'M JUST WEIRD" - My adorable dumb girl 💖
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Proposal Box */}
-        <div className="max-w-3xl mx-auto"></div>
-      </div>
+        <div className="max-w-3xl mx-auto">
           <div 
             className="bg-white bg-opacity-95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border-4 border-hello-kitty-pink relative overflow-hidden cursor-pointer transform hover:scale-105 transition-all duration-300"
             onClick={handleProposalClick}
