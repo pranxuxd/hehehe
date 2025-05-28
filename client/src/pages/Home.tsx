@@ -9,9 +9,8 @@ import Footer from '@/components/Footer';
 import SurpriseGift from '@/components/SurpriseGift';
 import PhotoSlideshow from '@/components/PhotoSlideshow';
 import BackgroundMusic from '@/components/BackgroundMusic';
-import CountdownTimer from '@/components/CountdownTimer';
 import PoetrySection from '@/components/PoetrySection';
-import FirstMeet from '@/components/FirstMeet';
+import ProposalSection from '@/components/ProposalSection';
 
 export default function Home() {
   // Set Avani's birthday date
@@ -38,18 +37,18 @@ export default function Home() {
           <div className="absolute bottom-10 right-10 text-3xl animate-pulse delay-500 opacity-30">💕</div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="font-cormorant text-3xl md:text-4xl mb-4 text-deep-lavender">Counting Down to Your Special Day 🎂</h2>
-          <CountdownTimer targetDate={birthdayDate} />
+          <h2 className="font-cormorant text-3xl md:text-4xl mb-4 text-deep-lavender">Happy Birthday My Sweet Avani! 🎂</h2>
+          <p className="font-dancing text-2xl text-hello-kitty-pink">May 25, 2025 - Your Special Day! 💕</p>
         </div>
       </div>
       
       <PhotoGallery />
-      <FirstMeet />
       <PhotoSlideshow />
       <PoetrySection />
       <LoveNotes />
       <SurpriseGift />
       <MusicPlayer />
+      <ProposalSection />
       <Footer />
     </Fragment>
   );
