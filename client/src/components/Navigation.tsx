@@ -25,7 +25,8 @@ export default function Navigation() {
     { id: 'poetry', label: '💝 Poetry', emoji: '🎀' },
     { id: 'notes', label: '💌 Love Notes', emoji: '😸' },
     { id: 'gifts', label: '🎁 Gifts', emoji: '✨' },
-    { id: 'music', label: '🎵 Music', emoji: '🐾' }
+    { id: 'music', label: '🎵 Music', emoji: '🐾' },
+    { id: 'first-meet', label: 'First Meet', emoji: '💖' } // Added first meet
   ];
 
   const handleNavClick = (id: string) => {
@@ -41,7 +42,7 @@ export default function Navigation() {
         {/* Cute floating decorations */}
         <div className="absolute top-1 left-4 text-lg opacity-60 animate-bounce">🐱</div>
         <div className="absolute top-1 right-4 text-lg opacity-60 animate-pulse">🎀</div>
-        
+
         <ul className="flex flex-wrap justify-center space-x-2 md:space-x-6">
           {navItems.map(item => (
             <li key={item.id}>

@@ -11,6 +11,7 @@ import PhotoSlideshow from '@/components/PhotoSlideshow';
 import BackgroundMusic from '@/components/BackgroundMusic';
 import CountdownTimer from '@/components/CountdownTimer';
 import PoetrySection from '@/components/PoetrySection';
+import FirstMeet from '@/components/FirstMeet';
 
 export default function Home() {
   // Set Avani's birthday date
@@ -43,6 +44,7 @@ export default function Home() {
       </div>
       
       <PhotoGallery />
+      <FirstMeet />
       <PhotoSlideshow />
       <PoetrySection />
       <LoveNotes />
