@@ -1,5 +1,5 @@
 
-import firstChatImg from '@/assets/images/first_chat.jpg';
+import firstChatImg from '@/assets/images/first_chat.png';
 
 export default function FirstMeet() {
   return (
