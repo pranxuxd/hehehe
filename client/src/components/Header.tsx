@@ -16,7 +16,7 @@ export default function Header() {
              backgroundBlendMode: "overlay" 
            }}></div>
       
-      <div className="relative z-10 text-center px-6 py-10 bg-white bg-opacity-85 rounded-lg shadow-md max-w-lg mx-auto animate-scale-in">
+      <div className="relative z-10 text-center px-6 py-10 bg-white bg-opacity-5 rounded-lg shadow-md max-w-lg mx-auto animate-scale-in">
         <h1 className="font-dancing text-5xl md:text-6xl mb-4 text-rose-gold">Happy Birthday</h1>
         <h2 className="font-cormorant text-4xl font-light tracking-wide text-muted-gray mb-6">Avani , my dear wife </h2>
         <p className="font-lato text-lg mb-8">A special birthday celebration filled with love , i love you my dear avani, you came you are the flower of my life may this day be special for you because it is the birthday of my own love , my wife , meri pattagobhi.i love you and forever hold your hands arms everything for you i would let the world in your feet my dear just order and keep smiling you know i can die for your smile</p>
