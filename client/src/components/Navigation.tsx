@@ -20,9 +20,12 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { id: 'gallery', label: 'Her' },
-    { id: 'messages', label: 'Love Notes' },
-    { id: 'music', label: 'Music' }
+    { id: 'gallery', label: '📸 Gallery', emoji: '🐱' },
+    { id: 'slideshow', label: '🎬 Slideshow', emoji: '💕' },
+    { id: 'poetry', label: '💝 Poetry', emoji: '🎀' },
+    { id: 'notes', label: '💌 Love Notes', emoji: '😸' },
+    { id: 'gifts', label: '🎁 Gifts', emoji: '✨' },
+    { id: 'music', label: '🎵 Music', emoji: '🐾' }
   ];
 
   const handleNavClick = (id: string) => {
@@ -32,17 +35,21 @@ export default function Navigation() {
   return (
     <nav 
       id="navigation" 
-      className={`sticky top-0 z-50 bg-white py-4 transition-shadow duration-300 ${isSticky ? 'bg-opacity-95 shadow-sm' : 'bg-opacity-100'}`}
+      className={`sticky top-0 z-50 bg-gradient-to-r from-baby-pink-light to-lavender-light py-4 transition-shadow duration-300 border-b-4 border-baby-pink ${isSticky ? 'bg-opacity-95 shadow-lg' : 'bg-opacity-100'}`}
     >
-      <div className="container mx-auto px-4">
-        <ul className="flex flex-wrap justify-center space-x-1 md:space-x-8">
+      <div className="container mx-auto px-4 relative">
+        {/* Cute floating decorations */}
+        <div className="absolute top-1 left-4 text-lg opacity-60 animate-bounce">🐱</div>
+        <div className="absolute top-1 right-4 text-lg opacity-60 animate-pulse">🎀</div>
+        
+        <ul className="flex flex-wrap justify-center space-x-2 md:space-x-6">
           {navItems.map(item => (
             <li key={item.id}>
               <button
                 onClick={() => handleNavClick(item.id)}
-                className="px-3 py-2 font-cormorant text-lg text-muted-gray hover:text-rose-gold transition-colors duration-300"
+                className="px-4 py-2 font-lato text-sm md:text-base text-deep-lavender hover:text-hello-kitty-pink transition-all duration-300 rounded-full hover:bg-white hover:bg-opacity-80 hover:scale-105 flex items-center space-x-1"
               >
-                {item.label}
+                <span>{item.label}</span>
               </button>
             </li>
           ))}

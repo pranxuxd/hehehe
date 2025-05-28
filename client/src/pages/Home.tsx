@@ -10,6 +10,7 @@ import SurpriseGift from '@/components/SurpriseGift';
 import PhotoSlideshow from '@/components/PhotoSlideshow';
 import BackgroundMusic from '@/components/BackgroundMusic';
 import CountdownTimer from '@/components/CountdownTimer';
+import PoetrySection from '@/components/PoetrySection';
 
 export default function Home() {
   // Set Avani's birthday date
@@ -29,15 +30,22 @@ export default function Home() {
       <Header />
       <Navigation />
       
-      <div className="bg-soft-pink py-12 text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="font-cormorant text-3xl md:text-4xl mb-4 text-muted-gray">Counting Down to Your Special Day</h2>
+      <div className="bg-gradient-to-br from-baby-pink-light via-lavender to-soft-pink py-12 text-center relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 left-10 text-4xl animate-bounce opacity-20">🐱</div>
+          <div className="absolute top-20 right-20 text-3xl animate-pulse opacity-30">🎀</div>
+          <div className="absolute bottom-20 left-20 text-4xl animate-bounce delay-1000 opacity-20">😸</div>
+          <div className="absolute bottom-10 right-10 text-3xl animate-pulse delay-500 opacity-30">💕</div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="font-cormorant text-3xl md:text-4xl mb-4 text-deep-lavender">Counting Down to Your Special Day 🎂</h2>
           <CountdownTimer targetDate={birthdayDate} />
         </div>
       </div>
       
       <PhotoGallery />
       <PhotoSlideshow />
+      <PoetrySection />
       <LoveNotes />
       <SurpriseGift />
       <MusicPlayer />
