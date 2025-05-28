@@ -18,45 +18,10 @@ export default function MusicPlayer() {
   const [isFavorite, setIsFavorite] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   
-  // Playlist of romantic songs
+  // The song that describes my love for you
   const playlist: Song[] = [
     {
       id: 1,
-      title: "Forever Love",
-      artist: "Romantic Melodies",
-      duration: 158,
-      src: "https://cdn.pixabay.com/download/audio/2022/03/15/audio_c9d4818250.mp3?filename=sweet-love-113409.mp3"
-    },
-    {
-      id: 2,
-      title: "Love Ballad",
-      artist: "Acoustic Dreams",
-      duration: 153,
-      src: "https://cdn.pixabay.com/download/audio/2023/06/21/audio_9e6c5f470c.mp3?filename=in-love-185587.mp3"
-    },
-    {
-      id: 3,
-      title: "Heart Symphony",
-      artist: "Piano Emotions",
-      duration: 180,
-      src: "https://cdn.pixabay.com/download/audio/2022/04/27/audio_99cc771722.mp3?filename=inspiring-cinematic-ambient-116199.mp3"
-    },
-    {
-      id: 4,
-      title: "Together Forever",
-      artist: "Soulful Harmony",
-      duration: 140,
-      src: "https://cdn.pixabay.com/download/audio/2022/04/20/audio_9a1fe17f6c.mp3?filename=lofi-chill-14492.mp3"
-    },
-    {
-      id: 5,
-      title: "My Avani",
-      artist: "Special Dedication",
-      duration: 134,
-      src: "https://cdn.pixabay.com/download/audio/2022/10/31/audio_9a68a1fde3.mp3?filename=emotional-piano-soundtrack-138306.mp3"
-    },
-    {
-      id: 6,
       title: "Saiyyan - Tujhe Jeet Jeet Haru",
       artist: "Special For You",
       duration: 210,
@@ -142,8 +107,8 @@ export default function MusicPlayer() {
   return (
     <section id="music" className="py-20">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="font-cormorant text-3xl md:text-4xl mb-2 text-muted-gray">Our Playlist</h2>
-        <p className="font-dancing text-xl text-rose-gold mb-12">Melodies that remind me of you</p>
+        <h2 className="font-cormorant text-3xl md:text-4xl mb-2 text-muted-gray">The Song That Describes My Love For You</h2>
+        <p className="font-dancing text-xl text-rose-gold mb-12">This melody captures everything I feel for you</p>
         
         <div className="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-6 md:p-8">
           <div className="flex items-center justify-between mb-6">
@@ -209,7 +174,7 @@ export default function MusicPlayer() {
           </div>
           
           <div className="mt-8">
-            <h4 className="font-cormorant text-lg mb-3 text-muted-gray text-left">Up Next:</h4>
+            <h4 className="font-cormorant text-lg mb-3 text-muted-gray text-left">Our Special Song:</h4>
             <ul className="space-y-3 text-left">
               {playlist.map((song, index) => (
                 <li 
