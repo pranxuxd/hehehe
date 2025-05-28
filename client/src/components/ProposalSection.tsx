@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-import chatScreenshot from '@/assets/images/chat_screenshot.png';
+import FirstMeet from '@/components/FirstMeet';
 
 export default function ProposalSection() {
   const [isProposalOpen, setIsProposalOpen] = useState(false);
@@ -55,33 +55,8 @@ export default function ProposalSection() {
         <div className="absolute top-1/4 right-1/3 text-2xl animate-pulse delay-1000 opacity-20">🌹</div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="font-cormorant text-4xl md:text-6xl mb-6 text-deep-lavender">
-            Our Sweet Chat Memories 💕
-          </h2>
-          <p className="font-dancing text-2xl text-hello-kitty-pink mb-8">
-            Look how cute we are together! 😸
-          </p>
-        </div>
-        
-        {/* Chat Screenshot */}
-        <div className="max-w-2xl mx-auto mb-16">
-          <div className="bg-white p-6 rounded-3xl shadow-2xl border-4 border-baby-pink relative">
-            <div className="absolute top-3 left-3 text-2xl">💬</div>
-            <div className="absolute top-3 right-3 text-2xl">😂</div>
-            <img 
-              src={chatScreenshot}
-              alt="Our cute chat conversation"
-              className="w-full rounded-2xl shadow-lg"
-            />
-            <div className="mt-4 text-center">
-              <p className="font-dancing text-xl text-deep-lavender">
-                "I CAN'T. I'M JUST WEIRD" - My adorable dumb girl 💖
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Use the FirstMeet component instead of the chat memories section */}
+      <FirstMeet />
 
         {/* Proposal Box */}
         <div className="max-w-3xl mx-auto">
