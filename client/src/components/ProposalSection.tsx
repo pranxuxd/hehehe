@@ -55,11 +55,13 @@ export default function ProposalSection() {
         <div className="absolute top-1/4 right-1/3 text-2xl animate-pulse delay-1000 opacity-20">🌹</div>
       </div>
 
-      {/* Use the FirstMeet component instead of the chat memories section */}
-      <FirstMeet />
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Use the FirstMeet component instead of the chat memories section */}
+        <FirstMeet />
 
         {/* Proposal Box */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto"></div>
+      </div>
           <div 
             className="bg-white bg-opacity-95 backdrop-blur-sm p-12 rounded-3xl shadow-2xl border-4 border-hello-kitty-pink relative overflow-hidden cursor-pointer transform hover:scale-105 transition-all duration-300"
             onClick={handleProposalClick}
