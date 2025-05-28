@@ -28,7 +28,6 @@ export default function Home() {
       
       <BackgroundMusic />
       <Header />
-      <Navigation />
       
       <div className="bg-gradient-to-br from-baby-pink-light via-lavender to-soft-pink py-12 text-center relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

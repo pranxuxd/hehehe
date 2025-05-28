@@ -2,42 +2,48 @@ export default function PoetrySection() {
   const poems = [
     {
       id: 1,
-      title: "For My Avani",
-      content: `In the garden of my heart, you bloom so bright,
-A rose among stars in the quiet night.
-Your laughter echoes like a gentle breeze,
-Your smile brings my restless heart to ease.
-
-Every moment with you feels like a dream,
-Your eyes hold a love so pure and serene.
-Happy birthday to the girl who stole my heart,
-You're my ending, my beginning, my perfect start.`
-    },
-    {
-      id: 2,
-      title: "Birthday Wishes",
-      content: `Today the world celebrates your birth,
-The day that brought you to this earth.
-With every candle on your cake,
-My love for you will never break.
-
-You paint my world in colors new,
-Everything's beautiful when I'm with you.
-Another year of memories we'll create,
-Happy birthday to my soulmate.`
-    },
-    {
-      id: 3,
-      title: "My Forever Love",
-      content: `Like Hello Kitty, you're sweet and kind,
-A precious treasure I'm lucky to find.
-Your gentle spirit, your caring ways,
-Light up even my darkest days.
-
-On this special day that's all about you,
-I promise my love will always be true.
-Through every season, through every year,
-You're the one I'll always hold dear.`
+      title: "My Dumb Girl 💕",
+      content: `Have you ever seen a dumb girl?
+I have seen one, when I sleep
+and in the real life too
+she's a girl whom I want to pull cheeks of
+she's the girl she calls her silly
+she's the girl I smile thinking
+she's the girl who just keeps on talking
+and I love listening to her
+she's a girl who's short and cute
+she's a cutie whose nose is pink
+when she feels shy in my dreams
+I imagine her in a sari holding my arm
+if I had control on time I would stop the time
+come to you and never turn on the time back
+hey lemme take a diary and write you
+even draw you
+I want my sketchbook full of your art
+I want my phone filled with your pics
+I want you my dumb girl,
+I want my whole life with you
+never stop talking, but if I talk more
+then take your finger and say shhhh
+I will not speak anything
+she gives me feeling of my real wife
+tho she is
+I will cook for her everything
+even tho we will together cook food
+but I wanna eat through your hands
+she's like the girl I listened in ik kudi
+thodi nakchadi but cute
+thodi yapper but tho more cute
+and I want to click like unlimited pic with you
+will I scroll never gets finished
+I wanna hold your hands
+I wanna touch her hairs
+I wanna take her fragrance better than any flower
+I wanna hug you and never let you go
+I don't care who left you
+but now cutie I have tied you
+wanna get tied to me forever? like this
+both dumb? 💖`
     }
   ];
 
@@ -69,32 +75,36 @@ You're the one I'll always hold dear.`
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {poems.map((poem) => (
             <div 
               key={poem.id} 
-              className="bg-white bg-opacity-90 backdrop-blur-sm p-8 rounded-3xl shadow-lg transform hover:-translate-y-2 transition-all duration-300 border-4 border-baby-pink relative overflow-hidden"
+              className="bg-white bg-opacity-90 backdrop-blur-sm p-10 rounded-3xl shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-4 border-baby-pink relative overflow-hidden"
             >
               {/* Cute corner decorations */}
-              <div className="absolute top-2 right-2 text-2xl opacity-60">🎀</div>
-              <div className="absolute bottom-2 left-2 text-xl opacity-50">🐾</div>
+              <div className="absolute top-4 right-4 text-3xl opacity-60">🎀</div>
+              <div className="absolute top-4 left-4 text-3xl opacity-60">🐱</div>
+              <div className="absolute bottom-4 left-4 text-2xl opacity-50">🐾</div>
+              <div className="absolute bottom-4 right-4 text-2xl opacity-50">💕</div>
               
-              <h3 className="font-cormorant text-2xl md:text-3xl mb-6 text-deep-lavender text-center">
+              <h3 className="font-cormorant text-3xl md:text-4xl mb-8 text-deep-lavender text-center">
                 {poem.title}
               </h3>
               <div className="relative">
-                <div className="absolute -left-4 top-0 text-4xl text-baby-pink opacity-30">"</div>
-                <p className="font-dancing text-lg md:text-xl leading-relaxed text-muted-gray whitespace-pre-line pl-4 pr-4">
+                <div className="absolute -left-6 top-0 text-6xl text-baby-pink opacity-30">"</div>
+                <p className="font-dancing text-xl md:text-2xl leading-relaxed text-muted-gray whitespace-pre-line pl-8 pr-8 text-center">
                   {poem.content}
                 </p>
-                <div className="absolute -right-4 bottom-0 text-4xl text-baby-pink opacity-30 transform rotate-180">"</div>
+                <div className="absolute -right-6 bottom-0 text-6xl text-baby-pink opacity-30 transform rotate-180">"</div>
               </div>
               
               {/* Cute bottom decoration */}
-              <div className="flex justify-center mt-6 space-x-2">
-                <span className="text-lg opacity-60">💖</span>
-                <span className="text-lg opacity-60">🐱</span>
-                <span className="text-lg opacity-60">💖</span>
+              <div className="flex justify-center mt-8 space-x-3">
+                <span className="text-2xl opacity-60">💖</span>
+                <span className="text-2xl opacity-60">🐱</span>
+                <span className="text-2xl opacity-60">💕</span>
+                <span className="text-2xl opacity-60">😸</span>
+                <span className="text-2xl opacity-60">💖</span>
               </div>
             </div>
           ))}
