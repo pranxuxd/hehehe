@@ -14,7 +14,7 @@ import ProposalSection from '@/components/ProposalSection';
 
 export default function Home() {
   // Set Avani's birthday date
-  const birthdayDate = new Date('2025-05-25T00:00:00');
+  const birthdayDate = new Date('2025-06-02T00:00:00');
   
   return (
     <Fragment>
