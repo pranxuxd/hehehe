@@ -7,7 +7,6 @@ import LoveNotes from "@/components/LoveNotes";
 import MusicPlayer from "@/components/MusicPlayer";
 import Footer from "@/components/Footer";
 import SurpriseGift from "@/components/SurpriseGift";
-import PhotoSlideshow from "@/components/PhotoSlideshow";
 import BackgroundMusic from "@/components/BackgroundMusic";
 import PoetrySection from "@/components/PoetrySection";
 
@@ -66,7 +65,6 @@ export default function Home() {
       </div>
 
       <PhotoGallery />
-      <PhotoSlideshow />
       <PoetrySection />
       <LoveNotes />
       <SurpriseGift />
