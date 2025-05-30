@@ -32,9 +32,10 @@
   --baby-pink-dark: 345 100% 82%;
   --soft-pink: 335 80% 90%;
   --lavender: 240 67% 94%;
-  --lavender-light: 240 100% 98%;
+  --lavender-light: 245 100% 97%;
+  --lavender-medium: 245 60% 85%;
   --lavender-dark: 270 50% 75%;
-  --deep-lavender: 270 50% 60%;
+  --deep-lavender: 270 60% 65%;
   --rose-gold: 353 29% 45%;
   --off-white: 0 0% 97%;
   --muted-gray: 0 0% 35%;
@@ -112,12 +113,24 @@
     background-color: hsl(var(--lavender-light));
   }
   
+  .bg-lavender-medium {
+    background-color: hsl(var(--lavender-medium));
+  }
+  
   .text-rose-gold {
     color: hsl(var(--rose-gold));
   }
   
   .text-deep-lavender {
     color: hsl(var(--deep-lavender));
+  }
+  
+  .text-lavender-light {
+    color: hsl(var(--lavender-light));
+  }
+  
+  .text-lavender-medium {
+    color: hsl(var(--lavender-medium));
   }
   
   .text-hello-kitty-pink {

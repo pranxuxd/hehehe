@@ -39,7 +39,7 @@ export default function Home() {
       <BackgroundMusic />
       <Header />
 
-      <div className="bg-gradient-to-br fr  om-baby-pink-light via-lavender to-soft-pink py-12 text-center relative overflow-hidden">
+      <div className="bg-gradient-to-br from-lavender-light via-lavender to-deep-lavender py-12 text-center relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-10 left-10 text-4xl animate-bounce opacity-20">
             🐱
@@ -55,10 +55,10 @@ export default function Home() {
           </div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="font-cormorant text-3xl md:text-4xl mb-4 text-deep-lavender">
+          <h2 className="font-cormorant text-3xl md:text-4xl mb-4 text-white">
             Happy Birthday My Sweet Avani! 🎂
           </h2>
-          <p className="font-dancing text-2xl text-hello-kitty-pink">
+          <p className="font-dancing text-2xl text-lavender-light">
             June 02, 2010 - Your Special Day! 💕
           </p>
         </div>
