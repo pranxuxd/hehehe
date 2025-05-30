@@ -10,7 +10,7 @@ import SurpriseGift from "@/components/SurpriseGift";
 import PhotoSlideshow from "@/components/PhotoSlideshow";
 import BackgroundMusic from "@/components/BackgroundMusic";
 import PoetrySection from "@/components/PoetrySection";
-import ProposalSection from "@/components/ProposalSection";
+
 
 export default function Home() {
   // Set Avani's birthday date
@@ -71,7 +71,6 @@ export default function Home() {
       <LoveNotes />
       <SurpriseGift />
       <MusicPlayer />
-      <ProposalSection />
       <Footer />
     </Fragment>
   );
